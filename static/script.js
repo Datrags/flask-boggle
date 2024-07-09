@@ -12,19 +12,16 @@ class BoggleGame {
       $(".add-word", this.board).on("submit", this.handleSubmit.bind(this));
     }
   
-    /* show word in list of words */
   
     showWord(word) {
       $("#words", this.board).append($("<li>", { text: word }));
     }
   
-    /* show score in html */
   
     showScore() {
       $("#score", this.board).text(this.score);
     }
-  
-    /* show a status message */
+
   
     showMessage(msg, cls) {
       $("#msg", this.board)
@@ -32,8 +29,6 @@ class BoggleGame {
         .removeClass()
         .addClass(`msg ${cls}`);
     }
-  
-
   
     async handleSubmit(e) {
       e.preventDefault();
@@ -64,13 +59,11 @@ class BoggleGame {
       $word.val("").focus();
     }
   
-    /* Update timer in DOM */
   
     showTimer() {
       $("#timer", this.board).text(this.secs);
     }
-  
-    /* Tick: handle a second passing in game */
+
   
     async tick() {
       this.secs -= 1;
@@ -81,8 +74,6 @@ class BoggleGame {
         await this.scoreGame();
       }
     }
-  
-    /* end of game: score and update message. */
   
     async scoreGame() {
       $(".add-word", this.board).hide();
