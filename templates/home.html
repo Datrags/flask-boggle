@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block home %}
+<h1>Input board size</h1>
+    <form method="GET" action="/boggle">
+        Width: <input type="number" name="w" value="5"/>
+        Height: <input type="number" name="h" value="5"/>
+        <button>Start!</button>
+    </form>
+
+
+
+{% endblock %}

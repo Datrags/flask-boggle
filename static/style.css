@@ -1,0 +1,9 @@
+table, td, tr {
+    border: 1px solid black;
+}
+
+#boggle {
+    text-align: center;
+    position: absolute;
+    margin: 0 auto;
+}
